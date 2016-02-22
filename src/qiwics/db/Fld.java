@@ -7,24 +7,24 @@ public class Fld<RecT, ValT> {
 		name = n;
 	}
 	
-	public Fld<RecT, ValT> get(Getter<RecT, ValT> g) {
-		getter = g;
+	public Fld<RecT, ValT> read(Reader<RecT, ValT> r) {
+		reader = r;
 		return this;
 	}
 
-	public ValT get(final RecT r) {
-		return getter.get(r);
+	public ValT getVal(final RecT r) {
+		return reader.val(r);
 	}
 	
-	public Fld<RecT, ValT> set(Setter<RecT, ValT> s) {
-		setter = s;
+	public Fld<RecT, ValT> write(Writer<RecT, ValT> w) {
+		writer = w;
 		return this;
 	}
 
-	public void set(final RecT r, final ValT v) {
-		setter.set(r, v);
+	public void setVal(final RecT r, final ValT v) {
+		writer.setVal(r, v);
 	}
 	
-	private Getter<RecT, ValT> getter;
-	private Setter<RecT, ValT> setter;	
+	private Reader<RecT, ValT> reader;
+	private Writer<RecT, ValT> writer;	
 }

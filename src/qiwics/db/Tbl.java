@@ -5,7 +5,7 @@ import java.util.UUID;
 import java.util.concurrent.ConcurrentSkipListMap;
 
 public abstract class Tbl<RecT extends Rec> {
-	public final UUIDCol Id = uuidCol("id").get((r) -> r.id);
+	public final UUIDCol Id = uuidCol("id").read((r) -> r.id);
 	public final String name;
 	
 	public Tbl(final String n) {
@@ -41,13 +41,13 @@ public abstract class Tbl<RecT extends Rec> {
 			super(n);
 		}
 	
-		public IntCol get(final Getter<RecT, Integer> g) {
-			super.get(g);
+		public IntCol read(final Reader<RecT, Integer> r) {
+			super.read(r);
 			return this;
 		}
 
-		public IntCol set(final Setter<RecT, Integer> s) {
-			super.set(s);
+		public IntCol write(final Writer<RecT, Integer> w) {
+			super.write(w);
 			return this;
 		}
 	}
@@ -57,13 +57,13 @@ public abstract class Tbl<RecT extends Rec> {
 			super(n);
 		}
 	
-		public StringCol get(final Getter<RecT, String> g) {
-			super.get(g);
+		public StringCol read(final Reader<RecT, String> r) {
+			super.read(r);
 			return this;
 		}
 
-		public StringCol set(final Setter<RecT, String> s) {
-			super.set(s);
+		public StringCol write(final Writer<RecT, String> w) {
+			super.write(w);
 			return this;
 		}
 	}
@@ -73,13 +73,13 @@ public abstract class Tbl<RecT extends Rec> {
 			super(n);
 		}
 	
-		public UUIDCol get(final Getter<RecT, UUID> g) {
-			super.get(g);
+		public UUIDCol read(final Reader<RecT, UUID> r) {
+			super.read(r);
 			return this;
 		}
 
-		public UUIDCol set(final Setter<RecT, UUID> s) {
-			super.set(s);
+		public UUIDCol write(final Writer<RecT, UUID> w) {
+			super.write(w);
 			return this;
 		}
 	}
