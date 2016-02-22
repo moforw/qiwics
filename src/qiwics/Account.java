@@ -43,8 +43,8 @@ public class Account extends Rec {
 	
 	public String email;
 	public String imapHost;
-	public int imapPort;
+	public int    imapPort;
 	public String password;
 	public String smtpHost;
-	public int smtpPort;
+	public int    smtpPort;
 }

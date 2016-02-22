@@ -1,5 +1,9 @@
 package qiwics;
 
+//add instime()
+///InstantCol
+///Init to now() in Rec
+
 //tiling interface
 ///add Tile class, extend Composite
 ////add label
