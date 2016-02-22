@@ -33,6 +33,11 @@ package qiwics;
 ///name, email, public key
 ///add contacts/new contact menu item
 
+// add markdown support in messages
+/// send markdown and render on other side
+
+// add support for full text search
+
 public class Main {
 	public static void main(final String[] args) {
 		Context cx = new Context();
