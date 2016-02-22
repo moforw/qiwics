@@ -4,7 +4,7 @@ import java.util.UUID;
 
 import jbls.*;
 
-public class Account extends Rec {
+public class Account extends BasicRec {
 	public static class T extends Tbl<Account> {		
 		public final StringCol Email =    stringCol("email")
 			.read((a)     -> a.email)
