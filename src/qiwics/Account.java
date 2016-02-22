@@ -2,7 +2,7 @@ package qiwics;
 
 import java.util.UUID;
 
-import qiwics.db.*;
+import jbls.*;
 
 public class Account extends Rec {
 	public static class T extends Tbl<Account> {		

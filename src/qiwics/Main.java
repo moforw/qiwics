@@ -1,8 +1,6 @@
 package qiwics;
 
-//add instime()
-///InstantCol
-///Init to now() in Rec
+import java.nio.file.FileSystems;
 
 //tiling interface
 ///add Tile class, extend Composite
@@ -27,8 +25,12 @@ package qiwics;
 
 //add Account class
 
-//generate RSA keys
-///generate if not exists and store in settings table
+//add Identity class
+///add name
+
+//add Identity tile with name and keys
+///generate RSA keys
+///and store in settings table
 
 //Add contact class
 
@@ -41,10 +43,14 @@ package qiwics;
 /// use html view for viewing and richtext for editing
 
 // add support for full text search
+/// link ngrams to entities
+/// add each ngram has a weight, text and entity
 
 public class Main {
 	public static void main(final String[] args) {
-		Context cx = new Context();
+		Context cx = 
+			new Context(FileSystems.getDefault().getPath("commit.log"));
+		
 		GUI.run(cx);    
 	}
 }
