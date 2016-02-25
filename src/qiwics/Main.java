@@ -2,26 +2,31 @@ package qiwics;
 
 import java.nio.file.FileSystems;
 
+//add Message class
+
+//gen markov text using TextGen for Message subject and body
+///select next suffix based on byte value, byte for byte
+///needs min byte value alts, else back up
+////will replay the same on other side
+
+//gen magic byte combo 0123456789 as subject
+///use to trigger imap fetch / process / decrypt
+
+//add Contact class
+
+//add KeyPad class/Tbl
+///contact ref
+
+///contains the TxtGen training material
+///use to train contact.txtGen()
+///add Contact.initKeyPads() method to generate new pads from existing emails in accounts
+////store complete message bodies
+
 //add Identity class
 ///name, publicKey & privateKey
 
 //gen keys on Identity creation
 ///use JSch / web example
-
-//add Message class
-
-//gen markov text using TextGen for Message subject and body
-/// select next suffix based on byte value, byte for byte
-/// needs at least bv suffixes, otherwise restart
-
-//gen magic byte combo 0123456789 as subject
-///use to trigger imap fetch / process / decrypt
-
-//add Contact class with keyPad, which contains the TxtGen training material
-///scan keyPad with dels ".!?" on init and train txtGen()
-///add method to generate new pad from existing emails in existing accounts
-////scan message bodies with dels ".!?" and store in Set
-/////store set rows in keyPad
 
 //tiling interface
 ///add Tile class, extend Composite

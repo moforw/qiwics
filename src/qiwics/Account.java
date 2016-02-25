@@ -6,19 +6,19 @@ import jbls.*;
 
 public class Account extends BasicRec {
 	public static class T extends Tbl<Account> {		
-		public final StringCol<Account> Email =    stringCol("email")
+		public final StrCol<Account> Email =    strCol("email")
 			.read((a)     -> a.email)
 			.write((a, v) -> a.email = v);
-		public final StringCol<Account> ImapHost = stringCol("imapHost")
+		public final StrCol<Account> ImapHost = strCol("imapHost")
 			.read((a)     -> a.imapHost)
 			.write((a, v) -> a.imapHost = v);
 		public final IntCol<Account> ImapPort =    intCol(   "imapPort")
 			.read((a)     -> a.imapPort)
 			.write((a, v) -> a.imapPort = v);
-		public final StringCol<Account> Password = stringCol("password")
+		public final StrCol<Account> Password = strCol("password")
 			.read((a)     -> a.password)
 			.write((a, v) -> a.password = v);
-		public final StringCol<Account> SmtpHost = stringCol("smtpHost")
+		public final StrCol<Account> SmtpHost = strCol("smtpHost")
 			.read((a)     -> a.smtpHost)
 			.write((a, v) -> a.smtpHost = v);
 		public final IntCol<Account> SmtpPort =    intCol(   "smtpPort")
@@ -37,7 +37,7 @@ public class Account extends BasicRec {
 	
 	public static final T table = new T("accounts");
 
-	public Account (UUID id) {
+	public Account (final UUID id) {
 		super(id);
 	}
 	
