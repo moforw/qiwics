@@ -2,6 +2,27 @@ package qiwics;
 
 import java.nio.file.FileSystems;
 
+//add Identity class
+///name, publicKey & privateKey
+
+//gen keys on Identity creation
+///use JSch / web example
+
+//add Message class
+
+//gen markov text using TextGen for Message subject and body
+/// select next suffix based on byte value, byte for byte
+/// needs at least bv suffixes, otherwise restart
+
+//gen magic word combo 0123456789 as subject
+///use to trigger imap fetch and process / decrypt
+
+//add Contact class with keyPad, which contains the TxtGen training material
+///scan keyPad with dels ".!?" on init and train txtGen()
+///add method to generate new pad from existing emails in existing accounts
+////scan message bodies with dels ".!?" and store in Set
+/////store set rows in keyPad
+
 //tiling interface
 ///add Tile class, extend Composite
 ////add label
@@ -18,12 +39,6 @@ import java.nio.file.FileSystems;
 ///used to view/edit a single account
 ///email, password, imap_host/port, smtp_host/port
 ///add accounts/new account menu item
-
-//add Table/Column/Index/Record like qiwics/C++
-///db package
-///use concurrent sets & maps
-
-//add Account class
 
 //add Identity class
 ///add name

@@ -6,22 +6,22 @@ import jbls.*;
 
 public class Account extends BasicRec {
 	public static class T extends Tbl<Account> {		
-		public final StringCol Email =    stringCol("email")
+		public final StringCol<Account> Email =    stringCol("email")
 			.read((a)     -> a.email)
 			.write((a, v) -> a.email = v);
-		public final StringCol ImapHost = stringCol("imapHost")
+		public final StringCol<Account> ImapHost = stringCol("imapHost")
 			.read((a)     -> a.imapHost)
 			.write((a, v) -> a.imapHost = v);
-		public final IntCol ImapPort =    intCol(   "imapPort")
+		public final IntCol<Account> ImapPort =    intCol(   "imapPort")
 			.read((a)     -> a.imapPort)
 			.write((a, v) -> a.imapPort = v);
-		public final StringCol Password = stringCol("password")
+		public final StringCol<Account> Password = stringCol("password")
 			.read((a)     -> a.password)
 			.write((a, v) -> a.password = v);
-		public final StringCol SmtpHost = stringCol("smtpHost")
+		public final StringCol<Account> SmtpHost = stringCol("smtpHost")
 			.read((a)     -> a.smtpHost)
 			.write((a, v) -> a.smtpHost = v);
-		public final IntCol SmtpPort =    intCol(   "smtpPort")
+		public final IntCol<Account> SmtpPort =    intCol(   "smtpPort")
 			.read((a)     -> a.smtpPort)
 			.write((a, v) -> a.smtpPort = v);
 		
