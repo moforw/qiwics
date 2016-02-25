@@ -28,8 +28,8 @@ public class TxtGen {
 	public TxtGen(final int pl) {
 		rnd.setSeed(Instant.now().toEpochMilli());
 		prefixLen = pl;
+		punct.add(',');
 		punct.add('.');
-		punct.add('?');
 		punct.add('?');
 		punct.add('!');
 	}
@@ -98,7 +98,7 @@ public class TxtGen {
 			p.addLast(w);
 			
 			if (i == n - 1 && !p.isEmpty()) {
-				final String pl = p.getLast();
+				final String pl = p.getLast().trim();
 				if (!punct.contains(pl.charAt(pl.length() - 1))) {
 					i--;
 				}

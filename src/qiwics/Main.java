@@ -14,8 +14,8 @@ import java.nio.file.FileSystems;
 /// select next suffix based on byte value, byte for byte
 /// needs at least bv suffixes, otherwise restart
 
-//gen magic word combo 0123456789 as subject
-///use to trigger imap fetch and process / decrypt
+//gen magic byte combo 0123456789 as subject
+///use to trigger imap fetch / process / decrypt
 
 //add Contact class with keyPad, which contains the TxtGen training material
 ///scan keyPad with dels ".!?" on init and train txtGen()
